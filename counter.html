@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            background-color: palevioletred;
+        }
+        #container{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+        #container > *{
+            margin-top: 20px;
+        }
+        input {
+            padding: 20px;
+            outline: none;
+            border: 2px solid #000;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            margin: 2px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: black;
+            color: palevioletred;
+        }
+        #input{
+            display:inline-block;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <input type="number">
+        <h1>Counter</h1>
+        <h1 id="counter"></h1>
+
+        <div>
+            <button onclick="increaseCounter()">Increase</button>
+            <button onclick="resetCounter()">Reset</button>
+            <button onclick="decreaseCounter()">Decrease</buttton>
+        </div>
+    </div>
+
+    
+<script>
+const counter = document.getElementById("counter")
+const number = document.querySelector("input")
+
+let value = 0
+
+counter.innerHTML = value
+
+function increaseCounter(){
+    if (number.value.length != 0){
+        value += Math.abs(Number(number.value))
+        counter.innerHTML = value
+    }
+    else {
+        value++
+        counter.innerHTML=value
+    }
+
+}
+function resetCounter(){
+    value=0
+    counter.innerHTML=value
+    number.value = ""
+}
+function decreaseCounter(){
+    if (number.value.length != 0){
+        value -= Number(number.value)
+        counter.innerHTML=value
+    }
+    else{
+        value--
+        counter.innerHTML=value
+    }
+}
+</script>
+</body>
+</html>
