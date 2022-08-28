@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Counter</title>
 
     <style>
         *{
             padding: 0;
             margin: 0;
-            background-color: palevioletred;
+            background-color:plum;
         }
         #container{
             height: 100vh;
@@ -18,10 +18,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 50px;
+            font-size: 30px;
         }
         #container > *{
-            margin-top: 20px;
+            margin-top: 30px;
         }
         input {
             padding: 20px;
@@ -30,28 +30,36 @@
             border-radius: 10px;
             font-size: 1.5rem;
             text-align: center;
+            margin-bottom: 30px;
         }
         button{
             padding: 10px;
-            margin: 2px;
+            margin: 5px;
             border-radius: 10px;
             border: 1px solid black;
         }
         button:hover{
             background-color: black;
-            color: palevioletred;
+            color: plum;
         }
         #input{
             display:inline-block;
-            margin-top: 50px;
+            margin-top: 100px;
+        }
+        .content{
+        width:50%;
+        border: 1px solid black;
+        margin: auto;
+        height: 100vh;
         }
     </style>
 </head>
 <body>
+    <div class="content">
     
     <div id="container">
-        <input type="number">
         <h1>Counter</h1>
+        <input type="number">
         <h1 id="counter"></h1>
 
         <div>
@@ -59,6 +67,7 @@
             <button onclick="resetCounter()">Reset</button>
             <button onclick="decreaseCounter()">Decrease</buttton>
         </div>
+    </div>
     </div>
 
     
